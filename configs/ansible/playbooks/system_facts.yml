@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  gather_facts: true
+
+  tasks:
+    - name: raportoi system tiedot
+      debug:
+        msg: 
+        - "Host: {{ ansible_hostname }}"
+        - "OS: {{ ansi}}"
