@@ -29,12 +29,19 @@ Topologia -kuva löytyy polusta: ~/images/topology.png
 
 # IP-suunnitelma
 
+| Verkko | Tarkoitus | Yhdyskäytävä |
+|---------|---------|---------|
+| 10.10.10.0/24 | Asiakkaiden verkko | 10.10.10.1 |
+| 10.10.20.0/24 | Palvelimien verkko | 10.10.20.1  |
+| 10.10.30.0/24 | "Branch asiakkaiden" verkko | 10.10.30.1 |
+| 10.10.99.0/24 | Hallinnan verkko | 10.10.99.1 |
+| 10.255.12.0/30 | r1-r2 yhdyskäytävä verkko | 10.255.12.1 ja 10.255.12.2  |
+| 10.255.23.0/30 | r2-r3 yhdyskäytävä verkko | 10.255.23.1 ja 10.255.23.2 |
 
-
-Pingailua:
+# Reitityksen analyysi:
 
 Yhteys löytyi verkkoihin.
-Liikenne kulki reitittimien välistä yhdyskäytävä verkkoa pitkin.
+Liikenne kulki reitittimien välistä yhdyskäytävä verkkoja pitkin.
 Reitille kuului reitittimet r2 ja r3.
 
 root@client1:/# ip addr
@@ -96,3 +103,9 @@ traceroute to 10.10.30.101 (10.10.30.101), 30 hops max, 60 byte packets
  2  10.255.12.2 (10.255.12.2)  1.616 ms  1.527 ms  1.501 ms
  3  10.255.23.2 (10.255.23.2)  1.477 ms  1.144 ms  1.090 ms
  4  10.10.30.101 (10.10.30.101)  0.692 ms  0.428 ms  0.266 ms
+
+ # Yhteenveto
+
+ Eniten aikaa dokumentaation luomisessa meni tutkia verkkoja ja mitä laitteita niihin kuuluu.
+
+ 
