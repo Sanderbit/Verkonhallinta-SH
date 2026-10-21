@@ -137,16 +137,23 @@ Täydennä seuraava taulukko:
 
 | Verkko | Tarkoitus | Yhdyskäytävä |
 |---------|---------|---------|
-| 10.10.10.0/24 | | |
-| 10.10.20.0/24 | | |
-| 10.10.30.0/24 | | |
-| 10.10.99.0/24 | | |
-| 10.255.12.0/30 | | |
-| 10.255.23.0/30 | | |
+| 10.10.10.0/24 | Asiakkaiden verkko | 10.10.10.1 |
+| 10.10.20.0/24 | Palvelimien verkko | 10.10.20.1  |
+| 10.10.30.0/24 | "Branch asiakkaiden" verkko | 10.10.30.1 |
+| 10.10.99.0/24 | Hallinnan verkko | 10.10.99.1 |
+| 10.255.12.0/30 | r1-r2 yhdyskäytävä verkko | 10.255.12.1 ja 10.255.12.2  |
+| 10.255.23.0/30 | r2-r3 yhdyskäytävä verkko | 10.255.23.1 ja 10.255.23.2 |
 
 Selvitä lisäksi:
 
 - Mitä laitteita kuhunkin verkkoon kuuluu?
+  10.10.10.0/24: client1, attacker ja r1. Yhdyskäytävänä r1
+  10.10.20.0/24: web1, db1 ja r2. Yhdyskäytävänä r2
+  10.10.30.0/24: branch-client ja r3. Yhdyskäytävänä r3
+  10.10.99.0/24: prometheus, ansible, grafana, cadvisor, zabbix ja r2. Yhdyskäytävänä r2
+  10.255.12.0/30: r1 ja r2. Yhdyskäytävänä r1 ja r2
+  10.255.23.0/30: r2 ja r3. Yhdyskäytävänä r2 ja r3
+  
 - Mikä reititin toimii yhdyskäytävänä?
 - Mitä tarkoitusta verkko palvelee?
 
