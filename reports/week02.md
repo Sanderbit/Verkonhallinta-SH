@@ -33,12 +33,14 @@ root@ansible:/# ip addr
        valid_lft forever preferred_lft forever
     inet6 ::1/128 scope host
        valid_lft forever preferred_lft forever
+       
 93: eth0@if94: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
     link/ether 02:42:ac:14:14:06 brd ff:ff:ff:ff:ff:ff link-netnsid 0
     inet 172.20.20.6/24 brd 172.20.20.255 scope global eth0
        valid_lft forever preferred_lft forever
     inet6 fe80::42:acff:fe14:1406/64 scope link
        valid_lft forever preferred_lft forever
+       
 108: eth1@if107: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9500 qdisc noqueue state UP group default
     link/ether aa:c1:ab:bb:60:91 brd ff:ff:ff:ff:ff:ff link-netnsid 1
     altname clab-o-36a02884b166b7e8
