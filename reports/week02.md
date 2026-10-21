@@ -1,20 +1,27 @@
 # Tehtävä 2.3
 
 Järjestelmän nimi: web1
+
 Käyttöjärjestelmä: Linux 6.18.33.2-microsoft-standard-WSL2
+
 uptime: Timeticks: (85754) 0:14:17.54
 
 # Tehtävä 2.4
 
 SNMPv2-MIB::sysName.0 = STRING: web1
+
 SNMPv2-MIB::sysDescr.0 = STRING: Linux web1 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64
+
 DISMAN-EVENT-MIB::sysUpTimeInstance = Timeticks: (106819) 0:17:48.19
 
 # Tehtävä 2.5
 
 root@ansible:/# snmpwalk -v2c -c public web1 ifDescr
+
 IF-MIB::ifDescr.1 = STRING: lo
+
 IF-MIB::ifDescr.87 = STRING: eth0
+
 IF-MIB::ifDescr.102 = STRING: eth1
 
 3 verkkorajapintaa
