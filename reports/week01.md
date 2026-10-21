@@ -1,10 +1,35 @@
-Raportti
+# Raportti
 
-Johdanto:
+# Johdanto:
 
 Ympäristön tarkoitus on simuloida verkkoa joka vastaa todella kevyttä, vaikkapa yrityksen verkkoa, asiakkailla, hyökkääjillä, tietokannoilla, ylläpitosovelluksilla ja erilaisilla aliverkoilla eri käyttötarkoituksille
 
-Verkkokaavio:
+
+# Verkkokaavio:
+
+Topologia -kuva löytyy polusta: ~/images/topology.png
+
+
+# Laiteluettelo:
+
+| Laite | Tarkoitus |
+|---------|---------|
+| r1 | Reititin josta attacker ja client1 yhdistää verkkoihin|
+| r2 | Reititin josta management ja palvelimet yhdistävät verkkoihin|
+| r3 | Reititin josta Branch Client yhdistää verkkoihin |
+| client1 | "Asiakkaan" päätelaite|
+| attacker |"Hyökkääjän" päätelaite |
+| web1 | Verkkosivu-palvelin|
+| db1 | Tietokanta-palvelin|
+| branch-client | "Sisaryritys asiakkaan" päätelaite|
+| ansible | Palvelin joka ajaa Ansible -softaa|
+| prometheus | Palvelin joka ajaa Prometheus -softaa |
+| grafana | Palvelin joka ajaa Grafana -softaa|
+| zabbix | Palvelin joka ajaa Zabbix -softaa|
+
+# IP-suunnitelma
+
+
 
 Pingailua:
 
