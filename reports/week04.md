@@ -97,8 +97,11 @@ Ajetaan: ansible all -i ../inventory.ini -m setup
 Yllä oleva komento näyttää liikaa dataa joten pitää ajaa halutut tiedot yksittäin jos halutaan käyttää kyseistä komentoa jaa löytää tarvittavat tiedot:
 
 ansible all -i ../inventory.ini -m setup -a "filter=ansible_distribution*"
+
 ansible all -i ../inventory.ini -m setup -a "filter=ansible_default_ipv4"
+
 ansible all -i ../inventory.ini -m setup -a "filter=ansible_processor_vcpus"
+
 ansible all -i ../inventory.ini -m setup -a "filter=ansible_memtotal_mb"
 
 | Kone | Käyttöjärjestelmä | IP-osoite | Prosessorit | Muisti (MB) |
