@@ -1,6 +1,6 @@
 ---
 - name: Install and configure SNMP
-  hosts: ubuntu_hosts
+  hosts: web1, db1, branch-client
   become: true
 
   vars:
@@ -33,10 +33,7 @@
       notify: restart snmpd
 
     - name: Enable SNMP service
-      service:
-        name: snmpd
-        enabled: yes
-        state: started
+      command: service snmpd start
 
     - name: Verify SNMP process
       shell: pgrep snmpd
