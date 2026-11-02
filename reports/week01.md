@@ -4,7 +4,7 @@
 
 Virtuaalisen ympäristön tarkoitus on simuloida verkkoa joka vastaa erittäin kevyttä pienyrityksen verkkoa. Siinä on kolme reititintä, päätelaitteita, palvelimia, "hyökkääjä" -laite sekä valvonta- ja automaatiotyökaluja. 
 
-Ympäristö ei omasta mielestäni tominut miten ensisilmäyksellä dokumentoinnista päätellen sen kuuluisi toimia. Pääosin management verkon osoitteet. Yhteyksiä oli reitittimissä olemassa, mutta management laitteiden eth1 ei aseteta ip:tä missään. Lisäsin golden.clab topologia tiedostoon management laitteille exec kohtiin verkon 10.10.99.0/24 ip osoitteiden asettelun ja reitityksen. Laitteisiin joissa ei ole ip työkalua olemassa, exec kohdassa asennetaan iproute2 paketti
+Ympäristö ei omasta mielestäni toiminut miten ensisilmäyksellä dokumentoinnista päätellen sen olisi pitänyt toimia. Pääosin management verkon osoitteet. Yhteyksiä oli reitittimissä olemassa, mutta management laitteiden eth1 ei aseteta ip:tä missään. Lisäsin golden.clab topologia tiedostoon management laitteille exec kohtiin verkon 10.10.99.0/24 ip osoitteiden asettelun ja reitityksen. Laitteisiin joissa ei ole ip työkalua olemassa, exec kohdassa asennetaan iproute2 paketti
 
 # Verkkokaavio:
 
