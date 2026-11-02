@@ -4,6 +4,7 @@
 
 Virtuaalisen ympäristön tarkoitus on simuloida verkkoa joka vastaa erittäin kevyttä pienyrityksen verkkoa. Siinä on kolme reititintä, päätelaitteita, palvelimia, "hyökkääjä" -laite sekä valvonta- ja automaatiotyökaluja. 
 
+Ympäristö ei omasta mielestäni tominut miten ensisilmäyksellä dokumentoinnista päätellen sen kuuluisi toimia. Pääosin management verkon osoitteet. Yhteyksiä oli reitittimissä olemassa, mutta management laitteiden eth1 ei aseteta ip:tä missään. Lisäsin golden.clab topologia tiedostoon management laitteille exec kohtiin verkon 10.10.99.0/24 ip osoitteiden asettelun ja reitityksen. Laitteisiin joissa ei ole ip työkalua olemassa, exec kohdassa asennetaan iproute2 paketti
 
 # Verkkokaavio:
 
@@ -46,6 +47,7 @@ Containerlab luo konteille myös eth0-liitännään verkkoon 172.20.20.0/24. Kos
 |---------|---------|---------|
 | client1 | 10.10.10.101 | 10.10.10.0/24 (USERS)|
 | web1 | 10.10.20.101 | 10.10.20.0/24 (SERVER) |
+| db1 | 10.10.20.102 | 10.10.20.0/24 (SERVER) |
 | branch-client | 10.10.30.101 | 10.10.30.0/24 (BRANCH) |
 
 

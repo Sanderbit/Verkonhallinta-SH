@@ -31,23 +31,25 @@ root@ansible:/# ip addr
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
        valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host
+    inet6 ::1/128 scope host 
        valid_lft forever preferred_lft forever
-       
-93: eth0@if94: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
-    link/ether 02:42:ac:14:14:06 brd ff:ff:ff:ff:ff:ff link-netnsid 0
-    inet 172.20.20.6/24 brd 172.20.20.255 scope global eth0
+123: eth0@if124: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:ac:14:14:0b brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 172.20.20.11/24 brd 172.20.20.255 scope global eth0
        valid_lft forever preferred_lft forever
-    inet6 fe80::42:acff:fe14:1406/64 scope link
+    inet6 fe80::42:acff:fe14:140b/64 scope link 
        valid_lft forever preferred_lft forever
-       
-108: eth1@if107: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9500 qdisc noqueue state UP group default
-    link/ether aa:c1:ab:bb:60:91 brd ff:ff:ff:ff:ff:ff link-netnsid 1
+128: eth1@if127: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9500 qdisc noqueue state UP group default 
+    link/ether aa:c1:ab:43:17:92 brd ff:ff:ff:ff:ff:ff link-netnsid 1
     altname clab-o-36a02884b166b7e8
-    inet6 fe80::a8c1:abff:febb:6091/64 scope link
+    inet 10.10.99.10/24 scope global eth1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a8c1:abff:fe43:1792/64 scope link 
        valid_lft forever preferred_lft forever
 
-eth0 yhdistää verkkoon
+eth1 yhdistää MANAGEMENT verkkoon
+
+eth0 on containerlab yhteys
 
 # Tehtävä 2.6
 
@@ -69,7 +71,7 @@ eth0 yhdistää verkkoon
 
 # Tehtävä 2.8
 
-1. SNMP:llä saa helposti kerättyä customoidulla scriptillä olennaisia tietoja useasta verkossa olevasta koneesta
+1. SNMP kerää olennaista dataa järjestelmän ylläpitoa varten
 
 2. Yleisiä SNMP tiedonkeräyskohteita ovat:
     - rajapintojen liikennemäärät ja virheet

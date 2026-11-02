@@ -2,6 +2,8 @@
 
 Infrastructure as Code tarkoittaa, että ympäristö hallitaan koodilla käsin tekemisen sijaan.
 
+Tein scriptin (deploy-snmp.sh), joka ajaa playbookin install-snmp.yml, että saan käynnistettyä koneisiin snmp:n helpommin
+
 ## Inventory
 
 # Tehtävä 4.1
@@ -34,7 +36,7 @@ Ryhmiä on muodostettu:
 
 Ryhmien hyötyjä on esim. yksi playbook saadaan ajettua koko ryhmälle, kirjautumisasetukset kirjoitetaan kerran ryhmän asetuksiin eikä joka koneelle erikseen, uuden koneen lisäys ryhmään ottaa sen automaattisesti mukaan toimintoihin.
 
-Pingaus ei toiminut valvontasovelluksiin. Niistä mahdollisesti puuttuu ssh yhteytta varten
+Pingaus ei toiminut valvontasovelluksiin. Niistä mahdollisesti puuttuu ssh, yhteytta varten
 
 # Tehtävä 4.2
 

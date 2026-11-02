@@ -161,16 +161,24 @@ topology:
         - ../configs/ansible:/ansible
         - ../configs:/configs
       exec:
+        - apt-get update
+        - apt-get install -y iproute2
+        - ip addr add 10.10.99.10/24 dev eth1
+        - ip route add 10.10.0.0/16 via 10.10.99.1
         - bash /ansible/ansible-bootstrap.sh
 
     prometheus:
       kind: linux
       image: prom/prometheus:latest
+      user: root
       ports:
         - 9090:9090
       binds:
         - ../configs/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
         - ../state/management/prometheus-data:/prometheus
+      exec:
+        - ip addr add 10.10.99.20/24 dev eth1
+        - ip route add 10.10.0.0/16 via 10.10.99.1
 
     cadvisor:
       kind: linux
@@ -185,6 +193,7 @@ topology:
     grafana:
       kind: linux
       image: grafana/grafana:latest
+      user: root
       ports:
         - 3000:3000
       binds:
@@ -192,6 +201,9 @@ topology:
         - ../configs/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
         - ../configs/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
         - ../configs/grafana/dashboards:/var/lib/grafana/dashboards
+      exec:
+        - ip addr add 10.10.99.30/24 dev eth1
+        - ip route add 10.10.0.0/16 via 10.10.99.1
 
     zabbix:
       kind: linux
@@ -202,6 +214,11 @@ topology:
       binds:
         - ../state/management/zabbix-mysql:/var/lib/mysql
         - ../state/management/zabbix-data:/var/lib/zabbix
+      exec:
+        - apt-get update
+        - apt-get install -y iproute2
+        - ip addr add 10.10.99.40/24 dev eth1
+        - ip route add 10.10.0.0/16 via 10.10.99.1
 
     syslog:
       kind: linux
