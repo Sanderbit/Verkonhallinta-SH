@@ -50,7 +50,7 @@ Kuvakaappaukset tarkkailusta:
 
 1. Mitä hyötyä Prometheuksesta on verrattuna SNMP:hen?
 
-    - Prometheus löytää kohteet automaattisesti, tarjoaa enemmän mittareita, hälytykset on helppo määrittää ja Grafana tekee helposti selkeämmän dashboardin
+    - Prometheus löytää kohteet automaattisesti, tarjoaa enemmän mittareita, hälytykset on helppo määrittää ja Grafanalla tekee selkeitä dashboardeja
 
 2. Millaisia mittareita ylläpitäjän kannattaa seurata jatkuvasti?
 
